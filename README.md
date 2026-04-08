@@ -71,16 +71,14 @@ const GITHUB_USERNAME = "AmitR2001";
 
 ## GitHub Pages Deployment (Free Hosting)
 
-1. Create a repository named `username.github.io` (replace `username` with your GitHub username).
-2. Upload all files from this `portfolio` folder to the root of that repository.
-3. Commit and push to the `main` branch.
-4. In GitHub: `Settings` -> `Pages`.
-5. Under **Build and deployment**, choose:
-   - Source: `Deploy from a branch`
-   - Branch: `main` and folder `/ (root)`
-6. Save and wait 1-2 minutes.
-7. Access your live site at:
-   - `https://username.github.io`
+This repository is configured to deploy with GitHub Actions.
+
+1. Commit and push changes to the `main` branch.
+2. In GitHub: `Settings` -> `Pages`.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Wait for the `Deploy to GitHub Pages` workflow to finish.
+5. Access your live site at:
+   - `https://<username>.github.io/<repo>/`
 
 ## Local Preview
 
