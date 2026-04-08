@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Amit M. Rathod, aspiring software developer focused on web application development." />
+  <meta name="keywords" content="Amit Rathod, software developer, portfolio, web development, JavaScript, Python" />
+  <meta name="author" content="Amit M. Rathod" />
+  <meta property="og:title" content="Amit M. Rathod | Portfolio" />
+  <meta property="og:description" content="Aspiring software developer with a focus on practical and efficient web applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/background.jpg" />
+  <meta property="og:url" content="https://AmitR2001.github.io" />
+  <title>Amit M. Rathod | Portfolio</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">Amit M. Rathod</a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Portfolio</p>
+        <h1 id="hero-title">Amit M. Rathod</h1>
+        <p class="hero-role">Aspiring Software Developer</p>
+        <p class="hero-summary">
+          I am an aspiring software developer with a strong interest in web application development, problem-solving, and algorithmic thinking.
+          I focus on building practical, user-friendly solutions and continuously improving through hands-on projects.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About Me</h2>
+        <div class="about-layout">
+          <img
+            class="profile-image"
+            src="assets/images/profile.jpg"
+            alt="Portrait of Amit M. Rathod"
+            loading="lazy"
+          />
+          <p>
+            I specialize in building web applications with a foundation in Python, JavaScript, and SQL.
+            My work so far includes AI-assisted academic tooling, NFC-enabled healthcare solutions, and data-driven application features.
+            I value clean implementation, clear communication, and consistent learning.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Skills</h2>
+        <div class="skills-grid">
+          <article class="card">
+            <h3>Programming Languages</h3>
+            <p>Python, SQL, HTML, CSS, JavaScript</p>
+          </article>
+          <article class="card">
+            <h3>Frameworks and Libraries</h3>
+            <p>React, Bootstrap</p>
+          </article>
+          <article class="card">
+            <h3>Tools and Software</h3>
+            <p>GitHub, Power BI, Automation Anywhere</p>
+          </article>
+          <article class="card">
+            <h3>Soft Skills</h3>
+            <p>Team Collaboration, Analytical Thinking, Emotional Intelligence, Adaptability, Effective Communication</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <h2 id="experience-title">Experience</h2>
+        <article class="timeline-item">
+          <h3>Project-Based Development Experience</h3>
+          <p class="timeline-meta">Academic and Personal Projects</p>
+          <p>
+            Built and delivered full-stack and web-based solutions focused on real-world use cases such as assessment automation,
+            NFC-driven patient information access, and health tracking support.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <h2 id="education-title">Education</h2>
+        <div class="education-grid">
+          <article class="card">
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p>Sardar Patel Institute of Technology, Mumbai</p>
+            <p>CGPA: 7.75 | Completion: July 2025</p>
+          </article>
+          <article class="card">
+            <h3>Bachelor of Science in Information Technology (B.Sc. IT)</h3>
+            <p>B.N. Bandodkar College of Science, Thane</p>
+            <p>CGPA: 7.35 | September 2018 - March 2021</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="projects-title">Projects</h2>
+          <p>Highlighted repositories from GitHub.</p>
+        </div>
+
+        <!-- Project cards are generated from the GitHub API in script.js -->
+        <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <p>If you would like to discuss a role, project, or collaboration, please feel free to reach out.</p>
+        <ul class="contact-list">
+          <li>Email: <a href="mailto:amit********@gmail.com">amit********@gmail.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">Amit Rathod</a></li>
+          <li>GitHub: <a href="https://github.com/AmitR2001" target="_blank" rel="noopener noreferrer">github.com/AmitR2001</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; <span id="year"></span> Amit M. Rathod</p>
+      <div class="footer-links">
+        <a href="https://github.com/AmitR2001" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
