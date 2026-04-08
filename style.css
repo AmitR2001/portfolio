@@ -224,7 +224,9 @@ h1 {
 .profile-image {
   width: 180px;
   height: 180px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center top;
   border-radius: 50%;
   border: 3px solid var(--surface);
   box-shadow: var(--shadow);

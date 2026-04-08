@@ -86,6 +86,69 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function extractGoogleDriveFileId(url) {
+  if (!url || !url.includes("drive.google.com")) {
+    return "";
+  }
+
+  const filePattern = /\/file\/d\/([a-zA-Z0-9_-]+)/;
+  const openPattern = /[?&]id=([a-zA-Z0-9_-]+)/;
+  const ucPattern = /\/uc\?(?:export=\w+&)?id=([a-zA-Z0-9_-]+)/;
+
+  const fileMatch = url.match(filePattern);
+  if (fileMatch && fileMatch[1]) {
+    return fileMatch[1];
+  }
+
+  const openMatch = url.match(openPattern);
+  if (openMatch && openMatch[1]) {
+    return openMatch[1];
+  }
+
+  const ucMatch = url.match(ucPattern);
+  if (ucMatch && ucMatch[1]) {
+    return ucMatch[1];
+  }
+
+  return "";
+}
+
+function toDirectImageUrl(url) {
+  const fileId = extractGoogleDriveFileId(url);
+  if (!fileId) {
+    return "";
+  }
+
+  // Thumbnail endpoint works reliably for public Google Drive images in img tags.
+  return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1000`;
+}
+
+function setupProfileImage() {
+  const profileImage = document.querySelector(".profile-image");
+  if (!profileImage) {
+    return;
+  }
+
+  const localFallback = profileImage.getAttribute("src") || "assets/images/profile.jpg";
+  const driveUrl = (profileImage.dataset.gdriveUrl || "").trim();
+  const converted = toDirectImageUrl(driveUrl || localFallback);
+
+  if (converted) {
+    profileImage.src = converted;
+  }
+
+  profileImage.referrerPolicy = "no-referrer";
+  profileImage.addEventListener(
+    "error",
+    () => {
+      if (profileImage.src !== localFallback) {
+        profileImage.src = localFallback;
+      }
+    },
+    { once: true }
+  );
+}
+
 async function fetchLanguages(languagesUrl) {
   try {
     const response = await fetch(languagesUrl);
@@ -201,4 +264,5 @@ async function renderProjects() {
 }
 
 updateYear();
+setupProfileImage();
 renderProjects();
