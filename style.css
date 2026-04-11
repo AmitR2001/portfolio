@@ -295,6 +295,19 @@ h1 {
   font-weight: 700;
 }
 
+.cert-reference {
+  margin-top: 0.65rem;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.cert-reference.is-placeholder {
+  color: var(--text-muted);
+  cursor:pointer;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--line);
+}
+
 .contact-list {
   list-style: none;
   padding: 0;
